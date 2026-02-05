@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Study Planner – Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #5b3cc4, #7b7df0, #d7a7f7);
+      color: #ffffff;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #eaeaff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+    }
+
+    /* PLANNER CONTENT */
+    .planner-container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .planner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .planner-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #f2f2ff;
+      margin-bottom: 35px;
+    }
+
+    /* PLANNER GRID */
+    .planner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .day-card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .day-card h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .task {
+      background: rgba(255, 255, 255, 0.25);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task span {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    /* BUTTON */
+    .add-btn {
+      display: block;
+      margin: 40px auto 0;
+      padding: 14px 45px;
+      background: #ffd34d;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .add-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      .planner-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Smart Study Planner</div>
+      <nav>
+        <a href="C:\Users\ADMIN\Desktop\New folder\index.html">Home</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\setup.html">Setup</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\planner.html" class="active">Planner</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\care.html">Care Mode</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PLANNER -->
+  <section class="planner-container">
+    <h1 class="planner-title">Weekly Study Planner 📅</h1>
+    <p class="planner-subtitle">
+      Your calm, distraction-free weekly study schedule
+    </p>
+
+    <div class="planner-grid">
+
+      <div class="day-card">
+        <h3>Monday</h3>
+        <div class="task">Maths Revision <span>6:00 – 7:00 PM</span></div>
+        <div class="task">Physics Problems <span>7:15 – 8:15 PM</span></div>
+      </div>
+
+      <div class="day-card">
+        <h3>Tuesday</h3>
+        <div class="task">Programming <span>6:00 – 7:30 PM</span></div>
+        <div class="task">Lab Prep <span>7:45 – 8:30 PM</span></div>
+      </div>
+
+      <div class="day-card">
+        <h3>Wednesday</h3>
+        <div class="task">Engineering Drawing <span>6:00 – 7:00 PM</span></div>
+        <div class="task">Revision <span>7:15 – 8:00 PM</span></div>
+      </div>
+
+      <div class="day-card">
+        <h3>Thursday</h3>
+        <div class="task">Data Structures <span>6:00 – 7:30 PM</span></div>
+        <div class="task">Practice <span>7:45 – 8:30 PM</span></div>
+      </div>
+
+      <div class="day-card">
+        <h3>Friday</h3>
+        <div class="task">Mock Test <span>6:00 – 7:30 PM</span></div>
+        <div class="task">Analysis <span>7:45 – 8:30 PM</span></div>
+      </div>
+
+      <div class="day-card">
+        <h3>Saturday</h3>
+        <div class="task">Project Work <span>5:00 – 7:00 PM</span></div>
+        <div class="task">Revision <span>7:15 – 8:00 PM</span></div>
+      </div>
+
+    </div>
+
+    <button class="add-btn">Add / Edit Schedule</button>
+  </section>
+
+</body>
+</html>

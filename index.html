@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #5b3cc4, #7b7df0, #d7a7f7);
+      color: #ffffff;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #eaeaff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+      color: #f2f2ff;
+    }
+
+    /* IMAGE CIRCLE */
+    .illustration {
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .illustration img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* BUTTON */
+    .btn {
+      margin-top: 30px;
+      padding: 14px 40px;
+      background: #ffd34d;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Smart Study Planner</div>
+      <nav>
+        <a href="C:\Users\ADMIN\Desktop\New folder\index.html" class="active">Home</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\setup.html">Setup</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\planner.html">Planner</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\care.html">Care Mode</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Study smarter, not harder 🎧</h1>
+    <p>
+      An offline, audio-first study companion designed for engineering students.<br>
+      No distractions. No pressure.
+    </p>
+
+    <!-- IMAGE IN CIRCLE -->
+    <div class="illustration">
+      <img src="c:\Users\ADMIN\Desktop\aaa\ChatGPT Image Feb 4, 2026, 10_04_34 PM.png" alt="Study Illustration">
+    </div>
+
+    <button class="btn">Get Started</button>
+  </section>
+
+</body>
+</html>

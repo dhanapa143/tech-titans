@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Study Planner – Care Mode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #5b3cc4, #7b7df0, #d7a7f7);
+      color: #ffffff;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #eaeaff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+    }
+
+    /* CARE MODE */
+    .care-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .care-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .care-subtitle {
+      font-size: 16px;
+      color: #f2f2ff;
+      margin-bottom: 40px;
+    }
+
+    /* CARDS */
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .care-card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .care-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .care-card p {
+      font-size: 14px;
+      color: #f6f6ff;
+      line-height: 1.6;
+    }
+
+    /* BUTTONS */
+    .care-btn {
+      margin-top: 18px;
+      padding: 10px 28px;
+      background: rgba(255,255,255,0.35);
+      color: #333;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .care-btn:hover {
+      background: #ffd34d;
+    }
+
+    /* FOOTER NOTE */
+    .care-note {
+      margin-top: 45px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      .care-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Smart Study Planner</div>
+      <nav>
+        <a href="C:\Users\ADMIN\Desktop\New folder\index.html">Home</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\setup.html">Setup</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\planner.html">Planner</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\care.html" class="active">Care Mode</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CARE MODE -->
+  <section class="care-container">
+    <h1 class="care-title">Care Mode 🧘</h1>
+    <p class="care-subtitle">
+      Slow down. Breathe. Take care of your mind before studying.
+    </p>
+
+    <div class="care-grid">
+
+      <div class="care-card">
+        <h3>🌬️ Guided Breathing</h3>
+        <p>
+          Calm your mind with slow breathing guidance.
+          Helps reduce anxiety before study sessions.
+        </p>
+        <button class="care-btn">Start Breathing</button>
+      </div>
+
+      <div class="care-card">
+        <h3>🎧 Focus Audio</h3>
+        <p>
+          Soft background sounds to help you focus without distraction.
+          Works fully offline.
+        </p>
+        <button class="care-btn">Play Audio</button>
+      </div>
+
+      <div class="care-card">
+        <h3>⏸️ Break Reminder</h3>
+        <p>
+          Gentle reminders to take breaks and avoid burnout.
+          No pressure, just care.
+        </p>
+        <button class="care-btn">Set Reminder</button>
+      </div>
+
+    </div>
+
+    <p class="care-note">
+      Care Mode is designed to protect your mental health while studying 💜
+    </p>
+  </section>
+
+</body>
+</html>

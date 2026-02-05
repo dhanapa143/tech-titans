@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Study Planner – Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #5b3cc4, #7b7df0, #d7a7f7);
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    header {
+      padding: 20px 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #eaeaff;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 5px;
+    }
+
+    /* SETUP CONTENT */
+    .setup-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .setup-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .setup-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #f2f2ff;
+      margin-bottom: 40px;
+    }
+
+    /* CARDS */
+    .setup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      color: #f6f6ff;
+    }
+
+    .card input,
+    .card select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    /* BUTTON */
+    .save-btn {
+      display: block;
+      margin: 40px auto 0;
+      padding: 14px 45px;
+      background: #ffd34d;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .save-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      .setup-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Smart Study Planner</div>
+      <nav>
+        <a href="C:\Users\ADMIN\Desktop\New folder\index.html">Home</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\setup.html" class="active">Setup</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\planner.html">Planner</a>
+        <a href="C:\Users\ADMIN\Desktop\New folder\care.html  ">Care Mode</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SETUP -->
+  <section class="setup-container">
+    <h1 class="setup-title">Personalize Your Study Setup ⚙️</h1>
+    <p class="setup-subtitle">
+      Configure your study routine once. We’ll handle the rest.
+    </p>
+
+    <div class="setup-grid">
+
+      <!-- STUDENT DETAILS -->
+      <div class="card">
+        <h3>👤 Student Info</h3>
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Department</label>
+        <input type="text" placeholder="Eg: CSE, ECE, MECH">
+      </div>
+
+      <!-- STUDY PREFERENCES -->
+      <div class="card">
+        <h3>📚 Study Preferences</h3>
+        <label>Daily Study Hours</label>
+        <select>
+          <option>1 – 2 Hours</option>
+          <option>2 – 4 Hours</option>
+          <option>4+ Hours</option>
+        </select>
+
+        <label>Best Study Time</label>
+        <select>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Night</option>
+        </select>
+      </div>
+
+      <!-- AUDIO MODE -->
+      <div class="card">
+        <h3>🎧 Audio Mode</h3>
+        <label>Voice Guidance</label>
+        <select>
+          <option>Enabled</option>
+          <option>Disabled</option>
+        </select>
+
+        <label>Reminder Tone</label>
+        <select>
+          <option>Soft</option>
+          <option>Normal</option>
+          <option>Silent</option>
+        </select>
+      </div>
+
+    </div>
+
+    <button class="save-btn">Save & Continue</button>
+  </section>
+
+</body>
+</html>
